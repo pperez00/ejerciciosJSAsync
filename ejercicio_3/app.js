@@ -4,7 +4,7 @@ const obtenerPokemon = require("./library");
 // Codigo funcion callback
 function funcionCallback(pokemon){
     const name = pokemon.name;
-    console.log(name);
+    console.log('Nombre: ', name);
     const habilidades = pokemon.abilities;    
         habilidades.forEach(element => {
             console.log('Habilidad: ',element.ability.name);
