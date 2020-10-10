@@ -3,9 +3,17 @@ const obtenerPokemon = require("./library");
 
 // Codigo funcion callback
 function funcionCallback(pokemon){
-    var poke = pokemon;
-    console.log(poke);
+    const name = pokemon.name;
+    console.log(name);
+    const habilidades = pokemon.abilities;    
+        habilidades.forEach(element => {
+            console.log('Habilidad: ',element.ability.name);
+        });
+    
+    
 }
+
+
 
 
 // Fin codigo
@@ -14,4 +22,4 @@ function funcionCallback(pokemon){
 // - nombrePokemon es un string con el nombre del pokemon
 // - funcionCallback es una función que recibe el objeto con los datos del pokemon extraido
 
-obtenerPokemon(nombre, funcionCallback);
+obtenerPokemon("bulbasaur", funcionCallback);
